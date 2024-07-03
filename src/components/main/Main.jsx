@@ -36,55 +36,80 @@ function Main() {
           <>
             <div className="greet">
               <p>
-                <span>Hello,</span>
+                <span>
+                  AI can make mistakes, please verify the important info.
+                </span>
               </p>
-              <p>Do you have any query?</p>
             </div>
             <div className="cards">
               <div
                 className="card"
                 onClick={() =>
-                  handleCardClick("Will Ai replace humans in jobs?")
+                  handleCardClick("What is artificial intelligence (AI)?")
                 }
               >
-                <p>Will Ai replace humans in jobs?</p>
-                {/* <img src={assets.compass_icon} alt="compass icon" /> */}
+                <p>What is artificial intelligence (AI)?</p>
               </div>
               <div
                 className="card"
                 onClick={() => handleCardClick("Why is AI getting so popular?")}
               >
                 <p>Why is AI getting so popular?</p>
-                <img src={assets.bulb_icon} alt="bulb icon" />
               </div>
               <div
                 className="card"
-                onClick={() => handleCardClick("Is AI dangerous to society?")}
+                onClick={() => handleCardClick("How long has AI been around?")}
               >
-                <p>Is AI dangerous to society?</p>
-                <img src={assets.message_icon} alt="message icon" />
+                <p>How long has AI been around?</p>
               </div>
               <div
                 className="card"
                 onClick={() => handleCardClick("How to learn AI?")}
               >
                 <p>How to learn AI?</p>
-                <img src={assets.code_icon} alt="code icon" />
+              </div>
+              <div
+                className="card"
+                onClick={() => handleCardClick("Can AI be dangerous?")}
+              >
+                <p>Can AI be dangerous?</p>
+              </div>
+              <div
+                className="card"
+                onClick={() =>
+                  handleCardClick("Can AI have consciousness or emotions?")
+                }
+              >
+                <p>Can AI have consciousness or emotions?</p>
+              </div>
+              <div
+                className="card"
+                onClick={() => handleCardClick("What are the benefits of AI?")}
+              >
+                <p>What are the benefits of AI?</p>
+              </div>
+              <div
+                className="card"
+                onClick={() =>
+                  handleCardClick(
+                    "What are the risks of AI replacing human jobs?"
+                  )
+                }
+              >
+                <p>What are the risks of AI replacing human jobs?</p>
               </div>
             </div>
           </>
         )}
 
-        {/* Render result section only when showResult is true */}
         {showResult && (
           <div className="result">
             <div className="result-title">
-              <p>{recentPrompt}</p>
+              <p className="recent-prompt">{recentPrompt}</p>
             </div>
             <div className="result-data">
               {loading ? (
                 <div className="loader">
-                  <hr />
                   <hr />
                   <hr />
                 </div>
@@ -99,7 +124,7 @@ function Main() {
           <div className="search-box">
             <input
               onChange={(e) => setInput(e.target.value)}
-              onKeyPress={handleKeyPress} // Handle Enter key press
+              onKeyPress={handleKeyPress}
               value={input}
               type="text"
               placeholder="Enter your query"
@@ -114,9 +139,7 @@ function Main() {
               ) : null}
             </div>
           </div>
-          <p className="bottom-info">
-            AI can make mistakes. Check important info.
-          </p>
+          <p className="bottom-info">Made with ❤️ by Sandesh Shrestha</p>
         </div>
       </div>
     </div>
