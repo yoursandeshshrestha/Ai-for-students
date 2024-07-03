@@ -42,6 +42,7 @@ const ContextProvider = (props) => {
     setRecentPrompt(prompt);
     // Add prompt to the beginning of the array
     setPrevPrompts((prev) => [prompt, ...prev.slice(0, MAX_PREV_PROMPTS - 1)]);
+    setInput("");
     const response = await runChat(prompt);
     let newResponse = marked(response);
     let newResponseArray = newResponse.split(" ");
@@ -50,7 +51,6 @@ const ContextProvider = (props) => {
       delayPara(i, nextWord + " ");
     }
     setLoading(false);
-    setInput("");
   };
 
   const contextValue = {
