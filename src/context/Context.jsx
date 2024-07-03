@@ -4,7 +4,7 @@ import { marked } from "marked";
 
 export const Context = createContext();
 
-const MAX_PREV_PROMPTS = 7; // Maximum number of recent prompts to store
+const MAX_PREV_PROMPTS = 7;
 
 const ContextProvider = (props) => {
   const [input, setInput] = useState("");
@@ -40,7 +40,6 @@ const ContextProvider = (props) => {
     setLoading(true);
     setShowResult(true);
     setRecentPrompt(prompt);
-    // Add prompt to the beginning of the array
     setPrevPrompts((prev) => [prompt, ...prev.slice(0, MAX_PREV_PROMPTS - 1)]);
     setInput("");
     const response = await runChat(prompt);
