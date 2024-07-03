@@ -48,7 +48,7 @@ function Main() {
                 }
               >
                 <p>Will Ai replace humans in jobs?</p>
-                <img src={assets.compass_icon} alt="compass icon" />
+                {/* <img src={assets.compass_icon} alt="compass icon" /> */}
               </div>
               <div
                 className="card"
