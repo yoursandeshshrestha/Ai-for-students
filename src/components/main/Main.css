@@ -22,15 +22,15 @@
 .main-container {
   max-width: 900px;
   margin: auto;
-  margin-top: 80px;
+  /* background-color: pink; */
 }
 
 .main .greet {
-  margin: 10px 0px;
+  margin: 50px 0px;
   font-size: 35px;
   color: #c4c7c5;
   font-weight: 500;
-  padding: 25px;
+  padding: 20px;
 }
 
 .main .greet span {
