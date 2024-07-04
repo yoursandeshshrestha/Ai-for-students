@@ -127,7 +127,7 @@ function Main() {
               onKeyPress={handleKeyPress}
               value={input}
               type="text"
-              placeholder="Enter your query"
+              placeholder="Insert your query here."
             />
             <div>
               {input ? (
