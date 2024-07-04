@@ -44,6 +44,8 @@ const ContextProvider = (props) => {
     setInput("");
     const response = await runChat(prompt);
     let newResponse = marked(response);
+    // console.log(newResponse);
+    newResponse = newResponse.replace(/<p><strong>/g, "<br><p><strong>");
     let newResponseArray = newResponse.split(" ");
     for (let i = 0; i < newResponseArray.length; i++) {
       const nextWord = newResponseArray[i];
